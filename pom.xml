@@ -14,6 +14,11 @@
     <name>backend-parent</name>
     <packaging>pom</packaging>
     <description>Meetingfilm的后端运维系统</description>
+
+    <modules>
+        <module>backend-common</module>
+    </modules>
+
     <properties>
         <java.version>1.8</java.version>
         <spring-cloud.version>Greenwich.SR3</spring-cloud.version>
