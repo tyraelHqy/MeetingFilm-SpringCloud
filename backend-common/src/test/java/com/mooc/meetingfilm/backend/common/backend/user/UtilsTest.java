@@ -6,6 +6,7 @@ import org.junit.Test;
 public class UtilsTest {
     @Test
     public void test(){
+
         BaseResponseVO responseVO = new BaseResponseVO();
         System.out.println(responseVO.run("Hello World"));
     }
