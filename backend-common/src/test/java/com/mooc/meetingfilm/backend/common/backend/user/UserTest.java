@@ -71,7 +71,7 @@ public class UserTest extends BackendCommonApplicationTests {
 
     @Test
     public void describeUser(){
-        MoocBackendUserT user = backendUser.describeUserByUserName("admin2");
+        MoocBackendUserT user = backendUser.describeUserByUserName("admin6");
         System.out.println(user);
     }
 

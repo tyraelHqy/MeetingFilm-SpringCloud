@@ -18,6 +18,7 @@
     <modules>
         <module>backend-common</module>
         <module>backend-utils</module>
+        <module>backend-user</module>
     </modules>
 
     <properties>
