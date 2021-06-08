@@ -17,6 +17,14 @@
         <java.version>1.8</java.version>
     </properties>
     <dependencies>
+
+        <!-- 公共工具模块支持 -->
+        <dependency>
+            <groupId>com.mooc.meetingfilm</groupId>
+            <artifactId>backend-utils</artifactId>
+        </dependency>
+
+
         <!-- mybatis-plus依赖 -->
         <dependency>
             <groupId>com.baomidou</groupId>

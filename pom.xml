@@ -17,6 +17,7 @@
 
     <modules>
         <module>backend-common</module>
+        <module>backend-utils</module>
     </modules>
 
     <properties>
@@ -70,6 +71,18 @@
                 <version>${spring-cloud.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>com.mooc</groupId>
+                <artifactId>backend-common</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.mooc.meetingfilm</groupId>
+                <artifactId>backend-utils</artifactId>
+                <version>${project.version}</version>
             </dependency>
 
             <!-- Mybatis-plus时引入的依赖-->
