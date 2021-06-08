@@ -9,4 +9,9 @@
         <result column="user_pwd" property="userPwd" />
         <result column="user_phone" property="userPhone" />
     </resultMap>
+
+    <select id="describeUserByUserName" parameterType="java.util.Map" resultMap="BaseResultMap">
+        select * from mooc_backend_user_t where user_name = #{username}
+    </select>
+
 </mapper>

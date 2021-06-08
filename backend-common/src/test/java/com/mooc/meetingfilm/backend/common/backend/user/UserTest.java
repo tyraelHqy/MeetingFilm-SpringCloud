@@ -1,8 +1,8 @@
 package com.mooc.meetingfilm.backend.common.backend.user;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
-import com.mooc.meetingfilm.backend.common.BackendCommonApplication;
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.mooc.meetingfilm.backend.common.BackendCommonApplicationTests;
 import com.mooc.meetingfilm.backend.common.dao.entity.MoocBackendUserT;
 import com.mooc.meetingfilm.backend.common.dao.mapper.MoocBackendUserTMapper;
@@ -52,6 +52,27 @@ public class UserTest extends BackendCommonApplicationTests {
         user.stream().forEach(
                 System.out::println
         );
+    }
+
+    @Test
+    public void selectByPage(){
+        // 分页对象
+        Page<MoocBackendUserT> page =new Page<>(1,3);
+
+        // 查询条件
+        QueryWrapper wrapper = new QueryWrapper();
+        wrapper.like("user_name","admin");
+
+        IPage<MoocBackendUserT> iPage = backendUser.selectPage(page, wrapper);
+        iPage.getRecords().stream().forEach(
+                System.out::println
+        );
+    }
+
+    @Test
+    public void describeUser(){
+        MoocBackendUserT user = backendUser.describeUserByUserName("admin2");
+        System.out.println(user);
     }
 
     @Test
