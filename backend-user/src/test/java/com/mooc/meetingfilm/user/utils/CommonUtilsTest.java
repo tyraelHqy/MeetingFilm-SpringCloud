@@ -6,7 +6,7 @@ import org.junit.Test;
 public class CommonUtilsTest {
     @Test
     public void test(){
-        BaseResponseVO responseVO = new BaseResponseVO();
-        System.out.println(responseVO.run("user"));
+//        BaseResponseVO responseVO = new BaseResponseVO();
+//        System.out.println(responseVO.run("user"));
     }
 }

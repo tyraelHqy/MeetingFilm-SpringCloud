@@ -22,7 +22,7 @@ public class UserTest extends BackendUserApplicationTests {
     public void add(){
 
         MoocBackendUserT user = new MoocBackendUserT();
-        user.setUserName("admin");
+        user.setUserName("admin1");
         user.setUserPwd(MD5Util.encrypt("admin123"));
         user.setUserPhone("18088888888");
 
