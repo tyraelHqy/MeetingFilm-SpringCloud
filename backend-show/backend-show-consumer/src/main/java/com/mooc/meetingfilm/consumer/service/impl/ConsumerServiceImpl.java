@@ -13,9 +13,6 @@ public class ConsumerServiceImpl implements ConsumerServiceAPI {
     @Autowired
     private RestTemplate restTemplate;
 
-    @Autowired
-    private LoadBalancerClient eurekaClient;
-
     @Override
     public String sayHello(String message) {
 
@@ -25,12 +22,12 @@ public class ConsumerServiceImpl implements ConsumerServiceAPI {
 //        String uri = "/provider/sayHello?message="+message;
 
         // GET Register 动态获取服务端口
-        ServiceInstance serviceInstance = eurekaClient.choose("hello-service-provider");
-        int port = serviceInstance.getPort();
-        String hostname = serviceInstance.getHost();
+//        ServiceInstance serviceInstance = eurekaClient.choose("hello-service-provider");
+//        int port = serviceInstance.getPort();
+//        String hostname = serviceInstance.getHost();
         String uri = "/provider/sayHello?message="+message;
 
-        String url = "http://"+hostname+":"+port+uri;
+        String url = "http://hello-service-provider:"+uri;
 
         // invoke provider test
         String result = restTemplate.getForObject(url, String.class);

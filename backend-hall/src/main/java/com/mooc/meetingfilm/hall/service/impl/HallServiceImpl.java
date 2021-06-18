@@ -89,7 +89,7 @@ public class HallServiceImpl implements HallServiceAPI {
 
         String uri = "/films/"+filmId;
 
-        String url = "http://"+hostname+":"+port + uri;
+        String url = "http://film-service:"+port + uri;
 
         // 通过restTemplate调用影片服务
         JSONObject baseResponseVO = restTemplate.getForObject(url, JSONObject.class);

@@ -1,5 +1,5 @@
 server:
-  port: 7101
+  port: 7103
 
 eureka:
   client:
@@ -9,7 +9,3 @@ eureka:
 spring:
   application:
     name: hello-service-provider
-
-hello-service-provider:
-  ribbon:
-    MaxAutoRetries : 3
