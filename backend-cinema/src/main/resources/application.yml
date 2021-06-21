@@ -7,12 +7,19 @@ eureka:
     service-url:
       defaultZone: http://localhost:8761/eureka/
 
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
 mybatis-plus:
   mapper-locations: classpath*:com/mooc/meetingfilm/**/xml/*Mapper.xml
   global-config:
     id-type: 0  #0:数据库ID自增   1:用户输入id  2:全局唯一id(IdWorker)  3:全局唯一ID(uuid)
     db-column-underline: false
     refresh-mapper: true
+
 
 spring:
   application:
