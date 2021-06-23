@@ -18,6 +18,7 @@
     <modules>
         <module>backend-common</module>
         <module>backend-api</module>
+        <module>backend-apigw-zuul</module>
         <module>backend-utils</module>
         <module>backend-hall</module>
         <module>backend-cinema</module>
