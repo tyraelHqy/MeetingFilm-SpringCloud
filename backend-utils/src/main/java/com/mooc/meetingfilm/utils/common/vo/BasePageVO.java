@@ -8,7 +8,7 @@ import lombok.Data;
 public class BasePageVO extends BaseRequestVO{
     private Integer nowPage=1;
 
-    private Integer pageSize=10;
+    private Integer pageSize=20;
 
 
     @Override
