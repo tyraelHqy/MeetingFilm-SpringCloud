@@ -9,54 +9,28 @@
         <relativePath>../pom.xml</relativePath>
     </parent>
     <groupId>com.mooc.meetingfilm</groupId>
-    <artifactId>backend-hall</artifactId>
+    <artifactId>backend-api</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>backend-hall</name>
-    <description>Meetingfilm 播放厅模块</description>
+    <name>backend-api</name>
+    <description>Demo project for Spring Boot</description>
     <properties>
         <java.version>1.8</java.version>
     </properties>
     <dependencies>
-        <dependency>
-            <groupId>com.mooc</groupId>
-            <artifactId>backend-common</artifactId>
-        </dependency>
 
         <dependency>
             <groupId>com.mooc.meetingfilm</groupId>
             <artifactId>backend-utils</artifactId>
         </dependency>
-
         <dependency>
-            <groupId>com.mooc.meetingfilm</groupId>
-            <artifactId>backend-api</artifactId>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
-    </dependencies>
 
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-        </plugins>
-        <!-- 资源引入 -->
-        <resources>
-            <resource>
-                <directory>src/main/resources</directory>
-                <filtering>true</filtering>
-            </resource>
-            <resource>
-                <directory>src/main/java</directory>
-                <includes>
-                    <include>**/*.xml</include>
-                </includes>
-            </resource>
-        </resources>
-    </build>
+    </dependencies>
 
 </project>
