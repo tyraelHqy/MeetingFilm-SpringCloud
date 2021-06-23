@@ -10,3 +10,16 @@ eureka:
 spring:
   application:
     name: hello-service-consumer
+
+feign:
+  hystrix:
+    enabled: true
+  httpclient:
+    enabled: true
+  compression:
+    request:
+      enabled: true
+      mime-types: text/xml,application/xml,application/json
+      min-request-size=: 2048
+    response:
+      enabled: true
