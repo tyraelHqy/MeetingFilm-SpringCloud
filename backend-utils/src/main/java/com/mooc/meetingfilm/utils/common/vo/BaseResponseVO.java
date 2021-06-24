@@ -38,7 +38,7 @@ public class BaseResponseVO<M> {
     }
 
     // 出现异常
-    public static<M> BaseResponseVO servieException(CommonServiceException e){
+    public static<M> BaseResponseVO serviceException(CommonServiceException e){
         BaseResponseVO responseVO = new BaseResponseVO();
         responseVO.setCode(e.getCode());
         responseVO.setMessage(e.getMessage());

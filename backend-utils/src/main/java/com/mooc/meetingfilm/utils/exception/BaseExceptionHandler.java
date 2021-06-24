@@ -17,6 +17,6 @@ public class BaseExceptionHandler {
     public BaseResponseVO ServiceExceptionHandler(HttpServletRequest request,CommonServiceException e){
         log.error("CommonServiceException, code:{}, message:{}",e.getCode(),e.getMessage());
 
-        return BaseResponseVO.servieException(e);
+        return BaseResponseVO.serviceException(e);
     }
 }

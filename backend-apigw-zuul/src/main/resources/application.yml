@@ -11,3 +11,13 @@ zuul:
       path: /film-api/**  # 匹配规则
     cinema-service:
       path: /cinema-api/**
+
+hystrix:
+  command:
+    default:
+      execution:
+        timeout:
+          enable: true
+        isolation:
+          thread:
+            timeoutInMilliseconds: 10
