@@ -4,29 +4,36 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.mooc.meetingfilm</groupId>
-        <artifactId>backend-parent</artifactId>
+        <artifactId>backend-show</artifactId>
         <version>0.0.1-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
     <groupId>com.mooc.meetingfilm</groupId>
-    <artifactId>backend-show</artifactId>
+    <artifactId>backend-show-testng</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>backend-show</name>
-    <packaging>pom</packaging>
-    <description>大道至简之演示模块</description>
+    <name>backend-show-testng</name>
+    <description>Demo project for Spring Boot</description>
     <properties>
         <java.version>1.8</java.version>
     </properties>
-
-    <modules>
-        <module>backend-show-provider</module>
-        <module>backend-show-consumer</module>
-        <module>backend-show-hystrix</module>
-        <module>backend-show-testng</module>
-    </modules>
-
     <dependencies>
-
+        <dependency>
+            <groupId>com.mooc.meetingfilm</groupId>
+            <artifactId>backend-utils</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.aventstack</groupId>
+            <artifactId>extentreports</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.vimalselvam</groupId>
+            <artifactId>testng-extentsreport</artifactId>
+        </dependency>
     </dependencies>
 
     <build>
